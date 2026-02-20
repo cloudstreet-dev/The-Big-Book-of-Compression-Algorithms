@@ -4,6 +4,8 @@
 >
 > — Claude Shannon, *A Mathematical Theory of Communication*, 1948
 
+*Thanks to Georgiy Treyvus, CloudStreet Product Manager, whose idea started this book.*
+
 Compression is everywhere and mostly invisible. When you stream a video, your browser is decoding a stream that was compressed with H.264 or AV1. When you send a file over Slack, it's gzip'd in transit. When you store a photograph, the JPEG algorithm made a hundred small decisions about which visual details your eye probably won't notice. When a Parquet file loads in ten milliseconds instead of ten seconds, it's because the columnar layout lets LZ4 skip over 90% of the bytes.
 
 Most developers interact with compression through flags and library calls: `--level 9`, `Content-Encoding: gzip`, `COMPRESS=zstd`. This book is for the developer who wants to understand what's happening underneath those flags — not just *which* algorithm to reach for, but *why* it works, *where* it breaks down, and *what* it's actually trading off.
